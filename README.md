@@ -108,7 +108,7 @@ sudo chmod -R 775 bootstrap/cache
 sudo chown -R www-data:www-data storage bootstrap/cache # Ajuste 'www-data' para o usuário do seu servidor web
 Rotas não encontradas ou Views não encontradas: Tente limpar os caches do Laravel:
 
-bash
+bas
 php artisan route:clear
 php artisan config:clear
 php artisan view:clear
