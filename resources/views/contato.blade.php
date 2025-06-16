@@ -70,7 +70,7 @@
 @section('content')
     <div class="contact-form-container">
         <h1>Entre em Contato</h1>
-        <form action="#" method="POST"> {{-- Definir rota de contato --}}
+        <form  action="{{ url('/contato') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="contact-nome">Nome Completo:</label>

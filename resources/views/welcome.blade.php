@@ -3,6 +3,193 @@
 @section('title', 'Cariocando.com: Encontre o melhor roteiro para seu passeio no RJ')
 
 @section('content')
+    @push('styles')
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+        .hero {
+            background-image: url('{{ asset('cariocando_assets/fundo-rio.jpg') }}');
+            height: 100vh;
+             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #7b9c32;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            }
+
+            .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.login img {
+  width: 28px;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  color: #7b9c32;
+  background-color: rgba(255,255,255,0.7);
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+/* Seção de destaques */
+.features {
+  padding: 60px 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.features h2 {
+  color: #8a9a3c;
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature {
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.feature .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.orange {
+  color: #ff5a1f;
+}
+
+.feature p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+.pontos-turisticos {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.pontos-turisticos h2 {
+  color: #7b9c32;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.pontos-turisticos .subtexto {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.card-content p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+    </style>
+
     <header class="hero" style="background-image: url('{{ asset('cariocando_assets/fundo-rio.jpg') }}');">
         <div class="hero-content">
             <h1>Encontre o melhor roteiro<br> para seu passeio no RJ.</h1>
@@ -66,19 +253,6 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <section style="background: #f26522; color: white; padding: 40px 20px; text-align: center;">
-        <h2 style="font-size: 1.8em;">Receba nossas novidades em seu e-mail!</h2>
-        <form style="margin-top: 20px; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
-            <input type="email" placeholder="Digite seu e-mail" style="padding: 12px; font-size: 1em; border: none; border-radius: 5px; width: 300px; max-width: 80%;">
-            <button type="submit" style="background-color: #94c142; color: white; border: none; border-radius: 5px; padding: 12px 20px; font-weight: bold; cursor: pointer;">Cadastrar</button>
-        </form>
-        <label style="display: flex; align-items: center; justify-content: center; margin-top: 15px; font-size: 0.9em; color: #fff;">
-            <input type="checkbox" style="margin-right: 8px;" />
-            Ao clicar em <strong>cadastrar</strong>, concordo que li e aceito os
-            <a href="#" style="color: white; text-decoration: underline; margin-left: 4px;">Termos de Uso, Condições Gerais do Seguro e Cobertura do produto.</a>
-        </label>
     </section>
 
     <section class="roteiros">

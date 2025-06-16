@@ -9,6 +9,7 @@ use App\Http\Controllers\CategoriaController; // CRUD Categoria
 use App\Http\Controllers\PostagemController;  // CRUD Postagem
 use App\Http\Controllers\UserController;      // Alterar Senha, Perfil
 use App\Http\Controllers\RoteiroController; // Para a página de roteiros
+use App\Http\Controllers\ContatoController;
 
 // Rotas da Área Pública
 Route::get('/', [SiteController::class, 'index'])->name('site.principal');
@@ -18,6 +19,8 @@ Route::get('/postagens/autor/{id}', [SiteController::class, 'postagensByAutorId'
 Route::get('/roteiro-detalhe/{id}', [SiteController::class, 'showPostagemDetalhe'])->name('site.roteiro.detalhe'); // Detalhes do roteiro
 Route::get('/contato', [SiteController::class, 'contato'])->name('site.contato'); // Página de Contato
 Route::get('/quem-somos', [SiteController::class, 'quemSomos'])->name('site.quem_somos'); // Página Quem Somos
+Route::get('/contato', [ContatoController::class, 'index'])->name('site.contato');
+Route::post('/contato', [ContatoController::class, 'enviar'])->name('site.contato.enviar');
 
 // Rotas de Autenticação (Laravel UI)
 Auth::routes();

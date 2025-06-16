@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url('fundo-rio.jpg'); /* Substitua pelo nome correto da imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #7b9c32;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.login a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.login img {
+  width: 28px;
+}
+
+.hero-content {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  color: #7b9c32;
+  background-color: rgba(255,255,255,0.7);
+  display: inline-block;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+/* Seção de destaques */
+.features {
+  padding: 60px 40px;
+  background-color: white;
+  text-align: center;
+}
+
+.features h2 {
+  color: #8a9a3c;
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.feature-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.feature {
+  max-width: 300px;
+  text-align: center;
+}
+
+.feature img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.feature .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.orange {
+  color: #ff5a1f;
+}
+
+.feature p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+.pontos-turisticos {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.pontos-turisticos h2 {
+  color: #7b9c32;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.pontos-turisticos .subtexto {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px 20px;
+}
+
+.card-content h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.card-content p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+}
+
+.icon {
+  margin-right: 5px;
+}
