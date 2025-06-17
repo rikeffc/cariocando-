@@ -1,3 +1,21 @@
+# Cariocando.com - Descrição
+
+Plataforma web desenvolvida para ser um guia colaborativo de roteiros e passeios no Rio de Janeiro. A aplicação foi construída utilizando PHP com o framework Laravel, seguindo a arquitetura MVC.
+
+Principais funcionalidades:
+
+Sistema completo de autenticação de usuários (login, cadastro e perfil).
+CRUD (Criação, Leitura, Atualização e Deleção) de roteiros turísticos.
+Páginas de conteúdo como "Quem Somos" e "Contato".
+
+# Nome dos intregrantes:
+
+Henrique de Jesus Freitas Pereira   
+Mateus José Rodrigues
+Josiele Alves Antunes
+Ana Clara Rodrigues de Sá
+
+
 # Cariocando.com - Guia de Configuração
 
 Este guia detalha os passos para configurar e executar o projeto Cariocando.com em um ambiente de desenvolvimento local após cloná-lo do GitHub ou recebê-lo como um arquivo ZIP.
@@ -75,10 +93,7 @@ bash
 npm install
 Compile os assets:
 Para desenvolvimento (com observação de arquivos):
-bash
-npm run dev
-Para produção (arquivos minificados):
-bash
+
 npm run build
 Nota: Pelos arquivos fornecidos, parece que os assets CSS e JS (como o RickEditor) estão diretamente na pasta public. Se for esse o caso, este passo pode não ser estritamente necessário, a menos que haja um processo de compilação para outros assets não mencionados.
 
