@@ -115,25 +115,10 @@ Abra seu navegador e acesse o endereço fornecido pelo comando php artisan serve
 Solução de Problemas Comuns
 Erro "No application encryption key has been specified.": Execute php artisan key:generate.
 
-Erro de Permissão em storage ou bootstrap/cache: Em ambientes Linux/macOS, você pode precisar ajustar as permissões:
 
 bash
-sudo chmod -R 775 storage
-sudo chmod -R 775 bootstrap/cache
-sudo chown -R www-data:www-data storage bootstrap/cache # Ajuste 'www-data' para o usuário do seu servidor web
-Rotas não encontradas ou Views não encontradas: Tente limpar os caches do Laravel:
-
-bas
 php artisan route:clear
 php artisan config:clear
 php artisan view:clear
 php artisan cache:clear
 Problemas com assets (CSS/JS não carregando):
-
-Verifique se o link simbólico do storage foi criado corretamente (php artisan storage:link).
-Se estiver usando npm, certifique-se de que os assets foram compilados (npm run dev ou npm run build).
-Verifique os caminhos nos seus arquivos Blade (asset('...')).
-Considerações Adicionais
-AdminLTE: O projeto utiliza AdminLTE para a área administrativa. As rotas de autenticação (/login, /register) e o dashboard (/home) devem funcionar após a configuração.
-RickEditor: Certifique-se de que os assets do RickEditor (CSS e JS) estão presentes na pasta public/RickEditor.
-Variáveis de Ambiente Específicas: Se o projeto utiliza outras APIs ou serviços externos, pode haver outras variáveis no .env que precisam ser configuradas (ex: chaves de API para e-mail, etc.).
