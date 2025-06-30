@@ -1,124 +1,99 @@
-# Cariocando.com - Descrição
+# 🗺️ Cariocando - Portal de Roteiros Turísticos para o Rio de Janeiro
 
-Plataforma web desenvolvida para ser um guia colaborativo de roteiros e passeios no Rio de Janeiro. A aplicação foi construída utilizando PHP com o framework Laravel, seguindo a arquitetura MVC.
+![Capa do Cariocando](https://i.imgur.com/link-para-uma-imagem-do-seu-projeto.png)
+*(Dica: Tire um print da sua página principal e suba no site [Imgur](https://imgur.com/upload) para gerar um link e colocar aqui)*
 
-Principais funcionalidades:
+## 🎯 Sobre o Projeto
 
-Sistema completo de autenticação de usuários (login, cadastro e perfil).
-CRUD (Criação, Leitura, Atualização e Deleção) de roteiros turísticos.
-Páginas de conteúdo como "Quem Somos" e "Contato".
+O **Cariocando** é uma plataforma web completa, desenvolvida como Projeto de Conclusão de Curso (TCC) de Técnico em Informática. A aplicação funciona como um guia colaborativo, permitindo que usuários cadastrados criem, compartilhem e explorem roteiros e passeios turísticos pela cidade do Rio de Janeiro.
 
-# Nome dos intregrantes:
+O objetivo foi construir uma solução robusta do zero, aplicando conceitos de desenvolvimento back-end e front-end em um projeto real e funcional.
 
-Henrique de Jesus Freitas Pereira   
-Mateus José Rodrigues
-Josiele Alves Antunes
-Ana Clara Rodrigues de Sá
+---
 
+## ✨ Principais Funcionalidades
 
-# Cariocando.com - Guia de Configuração
+* **Sistema de Autenticação Completo:** Cadastro e login de usuários com sessões seguras.
+* **Perfis de Usuário:** Área pessoal onde cada usuário pode gerenciar seus dados e roteiros.
+* **CRUD de Roteiros:** Funcionalidade completa para Criar, Ler, Atualizar e Deletar (CRUD) os roteiros turísticos na plataforma.
+* **Design Responsivo:** Interface adaptável para uma boa experiência tanto em desktops quanto em dispositivos móveis.
+* **Páginas Institucionais:** Seções como "Quem Somos" e "Contato" para apresentar o projeto.
 
-Este guia detalha os passos para configurar e executar o projeto Cariocando.com em um ambiente de desenvolvimento local após cloná-lo do GitHub ou recebê-lo como um arquivo ZIP.
+---
 
-## Pré-requisitos
+## 🛠️ Tecnologias Utilizadas
 
-Antes de começar, certifique-se de que você tem os seguintes softwares instalados em sua máquina:
+* **Back-end:** PHP 8.1+
+* **Framework:** Laravel 10+ (seguindo a arquitetura MVC)
+* **Banco de Dados:** MySQL
+* **Front-end:** HTML5, CSS3, JavaScript
+* **Gerenciador de Dependências:** Composer
 
-1.  **PHP:** Versão 8.1 ou superior (verifique a compatibilidade com a versão do Laravel do projeto, que é Laravel 10+, então PHP >= 8.1).
-2.  **Composer:** Gerenciador de dependências para PHP.
-3.  **Node.js e NPM:** (Opcional, mas recomendado se o projeto utilizar para compilação de assets frontend).
-4.  **Servidor de Banco de Dados:** MySQL (ou MariaDB) é o utilizado neste projeto.
-5.  **Git:** (Se estiver clonando do GitHub).
+---
 
-## Passos para Configuração
+## ⚙️ Guia de Instalação e Configuração
 
-### 1. Obter os Arquivos do Projeto
+Este guia detalha os passos para configurar e executar o projeto em um ambiente de desenvolvimento local.
 
-*   **Opção A: Clonar do GitHub**
+### **Pré-requisitos**
+* PHP >= 8.1
+* Composer
+* MySQL (ou MariaDB)
+* Node.js e NPM (Opcional)
+* Git
+
+### **Passos para Configuração**
+
+1.  **Clonar o Repositório**
     ```bash
-    git clone <URL_DO_SEU_REPOSITORIO_GIT> cariocando
-    cd cariocando
+    git clone [https://github.com/rikeffc/cariocando-.git](https://github.com/rikeffc/cariocando-.git)
+    cd cariocando-
     ```
-*   **Opção B: Arquivo ZIP**
-    1.  Extraia o conteúdo do arquivo ZIP para uma pasta de sua escolha (ex: `cariocando`).
-    2.  Abra o terminal ou prompt de comando e navegue até essa pasta.
-        ```bash
-        cd caminho/para/cariocando
+
+2.  **Instalar Dependências PHP**
+    ```bash
+    composer install
+    ```
+
+3.  **Configurar Arquivo de Ambiente (.env)**
+    * Copie o arquivo de exemplo: `copy .env.example .env` (no Windows) ou `cp .env.example .env` (no Linux/Mac).
+    * Gere a chave da aplicação: `php artisan key:generate`
+    * Abra o arquivo `.env` e configure as credenciais do seu banco de dados:
+        ```env
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=cariocando_db
+        DB_USERNAME=root
+        DB_PASSWORD=
         ```
 
-### 2. Instalar Dependências do PHP
+4.  **Configurar Banco de Dados**
+    * Crie um banco de dados no seu MySQL com o nome definido em `DB_DATABASE` (ex: `cariocando_db`).
+    * Execute as migrações para criar as tabelas:
+        ```bash
+        php artisan migrate
+        ```
+    * (Opcional) Se houver seeders, popule o banco: `php artisan db:seed`
 
-Use o Composer para instalar todas as dependências PHP definidas no arquivo `composer.json`.
-```bash
-composer install
-3. Configurar o Arquivo de Ambiente (.env)
-Copie o arquivo de exemplo .env.example para um novo arquivo chamado .env. Este arquivo conterá suas 
-configurações de ambiente locais.
-copy .env.example .env
+5.  **Criar Link de Armazenamento**
+    ```bash
+    php artisan storage:link
+    ```
 
-Gere uma chave de aplicação única para o seu projeto.
-php artisan key:generate
+6.  **Iniciar o Servidor**
+    ```bash
+    php artisan serve
+    ```
+    Acesse a aplicação em `http://localhost:8000`.
 
-Abra o arquivo .env em um editor de texto e configure as credenciais do seu banco de dados. Você precisará ajustar as seguintes variáveis (exemplo para MySQL):
+---
 
-env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=cariocando_db  
-DB_USERNAME=root           
-DB_PASSWORD=             
+## 👨‍💻 Equipe do Projeto
 
+Este projeto foi desenvolvido em equipe como TCC por:
 
-4. Criar o Banco de Dados
-Crie manualmente o banco de dados no seu servidor MySQL com o nome que você especificou em DB_DATABASE no arquivo .env (ex: cariocando_db). Você pode usar uma ferramenta como phpMyAdmin, DBeaver, MySQL Workbench, ou o cliente de linha de comando do MySQL.
-
-5. Executar as Migrações do Banco de Dados
-As migrações criam as tabelas no seu banco de dados.
-php artisan migrate
-Opcional: Popular o Banco de Dados (Seeders) Se o projeto tiver "seeders" para popular o banco com dados iniciais (como categorias padrão, usuários administradores, etc.), execute:
-php artisan db:seed
-
-
-6. Criar o Link Simbólico para Armazenamento Público
-Para que os arquivos enviados (como avatares, imagens de postagens) que são armazenados em storage/app/public fiquem acessíveis publicamente, crie um link simbólico.
-php artisan storage:link
-
-
-7. (Opcional) Instalar Dependências Frontend e Compilar Assets
-Se o seu projeto utiliza Node.js para gerenciar assets frontend (CSS, JavaScript) e tem um arquivo package.json:
-
-Instale as dependências Node:
-bash
-npm install
-Compile os assets:
-Para desenvolvimento (com observação de arquivos):
-
-npm run build
-Nota: Pelos arquivos fornecidos, parece que os assets CSS e JS (como o RickEditor) estão diretamente na pasta public. Se for esse o caso, este passo pode não ser estritamente necessário, a menos que haja um processo de compilação para outros assets não mencionados.
-
-
-8. Iniciar o Servidor de Desenvolvimento
-Agora você pode iniciar o servidor de desenvolvimento embutido do Laravel:
-php artisan serve
-
-9. Acessar a Aplicação
-Abra seu navegador e acesse o endereço fornecido pelo comando php artisan serve (geralmente http://127.0.0.1:8000 ou http://localhost:8000).
-
-
-========================================================================================================================================================================================================================
-
-
-
-
-
-Solução de Problemas Comuns
-Erro "No application encryption key has been specified.": Execute php artisan key:generate.
-
-
-bash
-php artisan route:clear
-php artisan config:clear
-php artisan view:clear
-php artisan cache:clear
-Problemas com assets (CSS/JS não carregando):
+* **Henrique de Jesus Freitas Pereira**
+* Mateus José Rodrigues
+* Josiele Alves Antunes
+* Ana Clara Rodrigues de Sá
