@@ -1,73 +1,78 @@
-🏖️ Cariocando.com - Plataforma de Roteiros Turísticos do Rio de Janeiro
+# 🏖️ Cariocando.com - Plataforma de Roteiros Turísticos do Rio de Janeiro
 
-Conectando pessoas através de experiências únicas no Rio de Janeiro
+> **Conectando pessoas através de experiências únicas no Rio de Janeiro**
+
 Uma plataforma web completa para compartilhamento e descoberta de roteiros turísticos no Rio de Janeiro, desenvolvida como projeto final do curso Técnico em Informática.
 
-O Cariocando.com é uma solução inovadora que permite aos usuários:
+[![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net)
+[![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://mysql.com)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://javascript.com)
 
-🗺️ Criar e compartilhar roteiros turísticos personalizados
-⭐ Avaliar e descobrir experiências através de um sistema de rating
-🎯 Encontrar roteiros ideais usando nosso Quiz de Preferências
-👥 Conectar-se com uma comunidade ativa de exploradores locais
-📱 Navegar com interface responsiva e moderna
+## 📋 Sobre o Projeto
 
-🚀 Funcionalidades Principais
-🔐 Sistema de Autenticação Completo
+O **Cariocando.com** é uma solução inovadora que permite aos usuários:
 
-Registro e login de usuários
-Recuperação de senha via email
-Perfis personalizáveis com avatar e informações
-Proteção de rotas sensíveis
+- 🗺️ Criar e compartilhar roteiros turísticos personalizados
+- ⭐ Avaliar e descobrir experiências através de um sistema de rating
+- 🎯 Encontrar roteiros ideais usando nosso Quiz de Preferências inteligente
+- 👥 Conectar-se com uma comunidade ativa de exploradores locais
+- 📱 Navegar com interface responsiva e moderna
 
-📝 Gestão de Conteúdo
+## 🚀 Funcionalidades Principais
 
-CRUD Completo para categorias e postagens
-Rich Text Editor para descrições detalhadas
-Upload de múltiplas imagens com preview
-Sistema de categorização avançado
-Validações robustas server-side e client-side
+### 🔐 Sistema de Autenticação Completo
+- Registro e login de usuários
+- Recuperação de senha via email
+- Perfis personalizáveis com avatar e informações
+- Proteção de rotas sensíveis
 
-🎯 Recursos Inteligentes
+### 📝 Gestão de Conteúdo
+- **CRUD Completo** para categorias e postagens
+- **Rich Text Editor** para descrições detalhadas
+- **Upload de múltiplas imagens** com preview
+- **Sistema de categorização** avançado
+- **Validações robustas** server-side e client-side
 
-Quiz de Preferências personalizado
-Sistema de avaliação por estrelas
-Filtros dinâmicos por categoria, orçamento e rating
-Paginação otimizada para performance
-Busca inteligente de roteiros
+### 🎯 Recursos Inteligentes
+- **Quiz de Preferências** personalizado
+- **Sistema de avaliação** por estrelas
+- **Filtros dinâmicos** por categoria, orçamento e rating
+- **Paginação otimizada** para performance
+- **Busca inteligente** de roteiros
 
-👤 Área do Usuário
+### 👤 Área do Usuário
+- **Dashboard administrativo** com AdminLTE
+- **Perfil público** personalizável
+- **Gestão de roteiros** próprios
+- **Histórico de atividades**
 
-Dashboard administrativo com AdminLTE
-Perfil público personalizável
-Gestão de roteiros próprios
-Histórico de atividades
+## 🛠️ Tecnologias Utilizadas
 
-🛠️ Tecnologias Utilizadas
-Backend
+### Backend
+- **PHP 8.1+** - Linguagem principal
+- **Laravel 10** - Framework MVC robusto
+- **MySQL** - Banco de dados relacional
+- **Eloquent ORM** - Para modelagem de dados
+- **Laravel UI** - Sistema de autenticação
 
-PHP 8.1+ - Linguagem principal
-Laravel 10 - Framework MVC robusto
-MySQL - Banco de dados relacional
-Eloquent ORM - Para modelagem de dados
-Laravel UI - Sistema de autenticação
+### Frontend
+- **HTML5 & CSS3** - Estrutura e estilização
+- **JavaScript ES6+** - Interatividade
+- **Bootstrap** - Framework CSS responsivo
+- **AdminLTE** - Interface administrativa
+- **Rich Text Editor** - Editor de texto avançado
 
-Frontend
+### Ferramentas & Recursos
+- **Laravel Migrations** - Versionamento do banco
+- **Blade Templates** - Sistema de templates
+- **Middleware** - Proteção e autenticação
+- **Form Validation** - Validação de formulários
+- **File Upload** - Gerenciamento de arquivos
 
-HTML5 & CSS3 - Estrutura e estilização
-JavaScript ES6+ - Interatividade
-Bootstrap - Framework CSS responsivo
-AdminLTE - Interface administrativa
-Rich Text Editor - Editor de texto avançado
+## 📁 Estrutura do Projeto
 
-Ferramentas & Recursos
-
-Laravel Migrations - Versionamento do banco
-Blade Templates - Sistema de templates
-Middleware - Proteção e autenticação
-Form Validation - Validação de formulários
-File Upload - Gerenciamento de arquivos
-
-📁 Estrutura do Projeto
+```
 cariocando/
 ├── app/
 │   ├── Http/Controllers/     # Controladores da aplicação
@@ -84,31 +89,34 @@ cariocando/
 │   └── js/                 # Scripts JavaScript
 └── routes/
     └── web.php             # Definição de rotas
-🗄️ Modelagem do Banco de Dados
-Entidades Principais
+```
 
-Users - Sistema completo de usuários
-Categorias - Classificação de roteiros
-Postagens - Roteiros compartilhados
-Audits - Log de atividades do sistema
+## 🗄️ Modelagem do Banco de Dados
 
-Relacionamentos
+### Entidades Principais
+- **Users** - Sistema completo de usuários
+- **Categorias** - Classificação de roteiros
+- **Postagens** - Roteiros compartilhados
+- **Audits** - Log de atividades do sistema
 
-User 1:N Postagens (Um usuário pode ter várias postagens)
-Categoria 1:N Postagens (Uma categoria pode ter várias postagens)
-Sistema de auditoria completo para rastreabilidade
+### Relacionamentos
+- User **1:N** Postagens (Um usuário pode ter várias postagens)
+- Categoria **1:N** Postagens (Uma categoria pode ter várias postagens)
+- Sistema de auditoria completo para rastreabilidade
 
-🚀 Como Executar
-Pré-requisitos
+## 🚀 Como Executar
 
-PHP 8.1 ou superior
-Composer
-MySQL 5.7+
-Node.js (opcional, para assets)
+### Pré-requisitos
+- PHP 8.1 ou superior
+- Composer
+- MySQL 5.7+
+- Node.js (opcional, para assets)
 
-Instalação
-bash# Clone o repositório
-git clone https://github.com/seu-usuario/cariocando.git
+### Instalação
+
+```bash
+# Clone o repositório
+git clone https://github.com/rikeffc/cariocando.git
 cd cariocando
 
 # Instale as dependências
@@ -137,74 +145,89 @@ php artisan storage:link
 
 # Inicie o servidor
 php artisan serve
-Acesse: http://localhost:8000
-📱 Screenshots
-Página Inicial
+```
+
+Acesse: `http://localhost:8000`
+
+## 📱 Screenshots
+
+### Página Inicial
 Interface moderna e atrativa com hero section e cards de roteiros em destaque.
-Sistema de Roteiros
+
+### Sistema de Roteiros
 CRUD completo com rich text editor, upload de imagens e sistema de categorização.
-Quiz de Preferências
+
+### Quiz de Preferências
 Algoritmo inteligente que sugere roteiros baseado nas preferências do usuário.
-Dashboard Administrativo
+
+### Dashboard Administrativo
 Interface AdminLTE para gestão completa do sistema.
-🎯 Diferenciais Técnicos
-🔒 Segurança
 
-Validação robusta de dados
-Proteção CSRF
-Sanitização de inputs
-Middleware de autenticação
+## 🎯 Diferenciais Técnicos
 
-⚡ Performance
+### 🔒 Segurança
+- Validação robusta de dados
+- Proteção CSRF
+- Sanitização de inputs
+- Middleware de autenticação
 
-Eager loading para otimização de queries
-Paginação eficiente
-Cache de configurações
-Otimização de assets
+### ⚡ Performance
+- Eager loading para otimização de queries
+- Paginação eficiente
+- Cache de configurações
+- Otimização de assets
 
-🎨 UX/UI
+### 🎨 UX/UI
+- Design responsivo mobile-first
+- Interface intuitiva e moderna
+- Feedback visual em tempo real
+- Navegação fluida
 
-Design responsivo mobile-first
-Interface intuitiva e moderna
-Feedback visual em tempo real
-Navegação fluida
+## 🌟 Próximas Implementações
 
-🌟 Próximas Implementações
+- [ ] **API RESTful** para integração mobile
+- [ ] **Sistema de comentários** nos roteiros
+- [ ] **Geolocalização** com mapas interativos
+- [ ] **Sistema de seguir usuários**
+- [ ] **Notificações push**
+- [ ] **Integração com redes sociais**
+- [ ] **Sistema de favoritos**
+- [ ] **Chat em tempo real**
 
- API RESTful para integração mobile
- Sistema de comentários nos roteiros
- Geolocalização com mapas interativos
- Sistema de seguir usuários
- Notificações push
- Integração com redes sociais
- Sistema de favoritos
- Chat em tempo real
+## 👥 Sobre o Desenvolvedor
 
-👨‍💻 Sobre o Desenvolvedor
-**Desenvolvido por: Henrique de Jesus Freitas Pereira** recém-formado em Técnico em Informática pelo Colégio Santo Inácio, atualmente cursando Engenharia de Software na Estácio de Sá.
-**Colaboradores: Mateus José Rodrigues, Josiele Alves Antunes , Ana Clara Rodrigues de Sá** recém-formados em Técnico em Informática pelo Colégio Santo Inácio
+**Desenvolvido por:** Henrique de Jesus Freitas Pereira  
+Recém-formado em **Técnico em Informática** pelo Colégio Santo Inácio, atualmente cursando **Engenharia de Software** na Estácio de Sá.
+
+**Colaboradores:** Mateus José Rodrigues, Josiele Alves Antunes, Ana Clara Rodrigues de Sá  
+Recém-formados em **Técnico em Informática** pelo Colégio Santo Inácio
 
 *Projeto final do curso Técnico em Informática - Colégio Santo Inácio*
-🚀 Competências Demonstradas
 
-Desenvolvimento Full-Stack com Laravel
-Arquitetura MVC e boas práticas
-Banco de dados relacionais e modelagem
-Interface responsiva e experiência do usuário
-Uso estratégico de IA como ferramenta de desenvolvimento
-Gestão de projetos e trabalho em equipe
+### 🚀 Competências Demonstradas
+- **Desenvolvimento Full-Stack** com Laravel
+- **Arquitetura MVC** e boas práticas
+- **Banco de dados relacionais** e modelagem
+- **Interface responsiva** e experiência do usuário
+- **Uso estratégico de IA** como ferramenta de desenvolvimento
+- **Gestão de projetos** e trabalho em equipe
 
-🎯 Objetivo Profissional
-Busco oportunidades de estágio ou posição júnior em desenvolvimento web para aplicar conhecimentos técnicos e continuar evoluindo na área de tecnologia.
-📞 Contato
+### 🎯 Objetivo Profissional
+Busco oportunidades de **estágio** ou **posição júnior** em desenvolvimento web para aplicar conhecimentos técnicos e continuar evoluindo na área de tecnologia.
 
-📧 Email: Henrique.jfp@outlook.com
-💼 LinkedIn: https://www.linkedin.com/in/henrique-jfp/
-🐙 GitHub: https://github.com/rikeffc
-📱 WhatsApp: (21) 98528-7511
+## 📞 Contato
 
-📄 Licença
+- 📧 **Email**: Henrique.jfp@outlook.com
+- 💼 **LinkedIn**: https://www.linkedin.com/in/henrique-jfp/
+- 🐙 **GitHub**: https://github.com/rikeffc
+- 📱 **WhatsApp**: (21) 98528-7511
+
+## 📄 Licença
+
 Este projeto foi desenvolvido para fins educacionais como projeto final do curso Técnico em Informática.
 
+---
 
-"A tecnologia sozinha não basta. É a tecnologia casada com as artes liberais, casada com as humanidades, que nos traz o resultado que faz nosso coração cantar." - Steve Jobs
+> *"A tecnologia sozinha não basta. É a tecnologia casada com as artes liberais, casada com as humanidades, que nos traz o resultado que faz nosso coração cantar."* - Steve Jobs
+
+**⭐ Se este projeto foi útil para você, considere dar uma estrela!**
