@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/63ace03b-39d6-46ed-8ee0-c4a520bd628a)🏖️ Cariocando.com - Plataforma de Roteiros Turísticos do Rio de Janeiro
+🏖️ Cariocando.com - Plataforma de Roteiros Turísticos do Rio de Janeiro
 
 Conectando pessoas através de experiências únicas no Rio de Janeiro
 Uma plataforma web completa para compartilhamento e descoberta de roteiros turísticos no Rio de Janeiro, desenvolvida como projeto final do curso Técnico em Informática.
